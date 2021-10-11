@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;900&display=swap');
+:root {
+    --font-family: 'Source Sans Pro', sans-serif;
+    --accents: #3e86d8;
+    --primary: #333333;
+    --white: #fff;
+    --lightgray: #fafafa;
+    --borders: #eaeaea;
+    --fontSize: 16px;
+    --transition: .3s ease;
+    --text: rgba(0,0,0,.8);
+}
+/***********
+basic styles
+***********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    color: var(--text);
+    background: var(--accents);
+    padding: 0 20px 50px 20px;
+    line-height: 1.6;
+}
+.container {
+    width: 65%;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+/***********
+header
+***********/
+header {
+    background-image: url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header article {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background: rgba(0, 0, 0, .8);
+    font-weight: 900;
+    color: var(--white);
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 15px;
+    line-height: 30px;
+}
+
+.logo span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+header .icons a {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-left: 30px;
+}
+
+header nav {
+    background: var(--accents);
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    opacity: .6;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: var(--white);
+    opacity: 1;
+}
+
+/***********
+services
+***********/
+
+.services {
+    background: var(--white);
+    padding: 100px 0;
+}
+.services .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.services div {
+    flex: 0 0 24%;
+}
+.services p {
+    line-height: 1.8;
+}
+.services img {
+    width: 100%;
+}
+.services h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+/***********
+blog
+***********/
+
+.blog {
+    background: var(--lightgray);
+    padding: 100px 0;
+}
+.blog h2, h4 {
+    text-align: center;
+}
+.blog .container {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog h2 {
+    font-size: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.blog h4 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.blog h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.blog p {
+    color: #929292;
+}
+button {
+    background: var(--accents);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: .9rem;
+    padding: 15px 20px;
+    border: none;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+button:hover {
+    background: var(--primary);
+    transition: var(--transition);
+}
+/***********
+footer
+***********/
+footer {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/***********
+responsive
+***********/
+@media(max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    header article {
+        flex-direction: column;
+    }
+    header .icons a {
+        margin: 10px;
+    }
+    header .icons {
+        margin-top: 8px;
+    }
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services div {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    .services h3,
+    .blog h3 {
+        margin-top: 10px;
+    }
+    .blog h2 {
+        font-size: 2.3rem;
+    }
+    .blog div {
+        text-align: center;
+    }
+    button {
+        margin-bottom: 10px;
+    }
+    .services,
+    .blog,
+    .blog .container {
+        padding: 20px 0;
+    }
+    footer {
+        margin-bottom: 60px;
+    }
+}
